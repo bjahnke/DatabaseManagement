@@ -225,8 +225,28 @@ where cid not in( select cid
 		where aid = 'a01');
 
 --4.)
-select cid 
+select distinct cid 
 from orders 
-where pid in( select pid 
+where cid in( select cid 
 		from orders 
-		where pid in('p01', 'p07'));
+		where pid = 'p01'
+			intersect
+		select cid
+		from orders
+		where pid = 'p07');
+
+--5.)
+select distinct pid
+from orders 
+where cid not in( select cid
+			from orders 
+			where aid = 'a07')
+order by pid DESC;
+
+--6.)
+select name, discounts, city
+from customers
+where  
+
+
+
