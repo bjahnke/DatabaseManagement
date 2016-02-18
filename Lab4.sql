@@ -244,9 +244,24 @@ where cid not in( select cid
 order by pid DESC;
 
 --6.)
-select name, discounts, city
+select name, discount, city
 from customers
-where  
+where cid in( select cid 
+		from orders
+		where aid in( select aid 
+				from agents 
+				where city in ('London', 'New York')));
+
+--7.)
+select *
+from customers
+where cid in( select cid 
+		from customers
+		where discount in( select discount
+					from customers 
+					where city in('Dallas', 'London')));
+
+--8.)
 
 
 
