@@ -225,15 +225,13 @@ where cid not in( select cid
 		where aid = 'a01');
 
 --4.)
-select distinct cid 
+select cid 
 from orders 
-where cid in( select cid 
-		from orders 
-		where pid = 'p01'
-			intersect
-		select cid
-		from orders
-		where pid = 'p07');
+where pid = 'p01'
+	intersect
+select cid
+from orders
+where pid = 'p07';
 
 --5.)
 select distinct pid
