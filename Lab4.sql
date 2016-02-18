@@ -202,14 +202,31 @@ from orders;
 --1.)
 select city
 from agents
-where aid in(Select aid 
+where aid in( select aid 
 		from orders
 		where cid = 'c002');
 
 --2.)
 select pid 
 from orders
-where pid in(select aid 
-		from agents
-		where city = 'Dallas')
+where aid in( select aid 
+		from orders
+		where cid in( select cid
+				from customers 
+				where city = 'Dallas'))
+
 order by pid DESC; 
+
+--3.)
+select cid, name
+from customers 
+where cid not in( select cid
+		from orders
+		where aid = 'a01');
+
+--4.)
+select cid 
+from orders 
+where pid in( select pid 
+		from orders 
+		where pid in('p01', 'p07'));
