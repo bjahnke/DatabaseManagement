@@ -251,13 +251,11 @@ where cid in( select cid
 				where city in ('London', 'New York')));
 
 --7.)
-select *
+select name
 from customers
-where cid in( select cid 
-		from customers
-		where discount in( select discount
-					from customers 
-					where city in('Dallas', 'London')));
+where discount in( select discount
+			from customers 
+			where city in('Dallas', 'London'));
 
 --8.)
 
