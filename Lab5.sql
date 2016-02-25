@@ -213,6 +213,19 @@ inner join customers c on o.cid = c.cid
 where c.city = 'Dallas'
 order by o.pid DESC;
 
+--3.)
+select name 
+from customers  
+where cid not in(select cid
+		from orders);
+
+--4.)
+select c.name
+from customers c
+full outer join orders o on c.cid = o.cid
+where c.cid is Null 
+or o.cid is Null 
+
 
 --6.) 
 Select c.name, a.name, c.city
