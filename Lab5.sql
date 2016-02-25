@@ -199,6 +199,21 @@ from products;
 select *
 from orders;
 
+--1.)
+select a.city
+from agents a
+inner join orders o on a.aid = o.aid
+where o.cid = 'c002';
+
+--2.)
+select o.pid
+from agents a
+inner join orders o on a.aid = o.aid 
+inner join customers c on o.cid = c.cid
+where c.city = 'Dallas'
+order by o.pid DESC;
+
+
 --6.) 
 Select c.name, a.name, c.city
 from customers c, agents a
@@ -211,6 +226,7 @@ where c.city IN(select city
 		from products p
 		group by city
 		Limit 1);
+
 
 
 
