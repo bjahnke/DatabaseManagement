@@ -1,4 +1,5 @@
-﻿--Brian Jahnke
+﻿--Brian Jahnke 
+--Lab 5
 
 ----------------------------------------------------------------------------------------
 -- Postgres create, load, and query script for CAP2.
@@ -224,7 +225,12 @@ select c.name
 from customers c
 full outer join orders o on c.cid = o.cid
 where c.cid is Null 
-or o.cid is Null 
+or o.cid is Null;
+
+--5.) 
+select c.name, a.name
+from customers c, agents a
+where c.city = a.city;
 
 
 --6.) 
