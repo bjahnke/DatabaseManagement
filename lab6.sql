@@ -252,6 +252,16 @@ where dollars not in (select o.qty*p.priceUSD*(1-(discount/100)) as truetotal
 			inner join products p on o.pid = p.pid
 			inner join customers c on o.cid = c.cid);
 
+--7.)
+--A left outer join will use the first table stated called the "left" table
+--as the main reference table while also including elements that the right 
+--and left table share. A right outer join will use the second table stated 
+--or the "right" table as the main reference table while including elements 
+--shared by both right and left tables. For example if a left table includes 
+--(apple, orange, banana) and a right table includes (apple, peach, mango),
+--left outer join would include(apple, orange, banana, apple), but right join 
+--would yield (apple, peach, mango, apple).    
+
 
 
 
