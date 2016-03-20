@@ -1,0 +1,28 @@
+9 pts
+
+1. 
+
+Evidence looks ok.
+
+
+2.
+
+Excellent knowledge of the terms primary key, candidate key, and superkey.
+
+
+3.
+
+You did not discuss datatypes, and only mentioned what fields were -nullable-
+but did not explain why.
+
+
+4.
+
+Good explanations about the rules. 
+
+The ``all rows must be unique'' is right, but be careful, it does not make it
+easy or hard to search data.
+
+
+
+- Dr. Rivas
