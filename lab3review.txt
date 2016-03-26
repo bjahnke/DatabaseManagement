@@ -1,0 +1,27 @@
+10 pts
+
+Correct output for all queries
+Correct SQL statements
+SQL statements are readable
+
+Recommendations: 
+ To improve your readability, write queries instead of this
+  select *
+  from products
+  where city NOT IN('Dallas', 'Duluth')
+  and priceUSD >= 1;
+ do it like this:
+  SELECT *
+  FROM products
+  WHERE city NOT IN ('Dallas', 'Duluth')
+    AND priceUSD >= 1;
+
+
+
+In general: 
+
+- PLEASE only include your queries! You included a lot of other things. You
+  droped my tables when I ran your file! I am a bit upset about that.
+
+
+- Dr. Rivas
