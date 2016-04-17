@@ -1,0 +1,31 @@
+9 pts
+
+Correct output for all queries
+Correct queries
+Correct SQL statements
+SQL statements are readable
+
+
+
+
+8. Tell me about check constraints: What are they? What are they good for? What
+is the advantage of putting that sort of thing inside the database? Make up
+some examples of good uses of check constraints and some examples of bad uses
+of check constraints. Explain the differences in your examples and argue your
+case.
+
+- You discussed constraints, but not "check constraints". There is a
+  difference. 
+
+- Check for spelling. Proof read your writing.
+
+
+In general: 
+
+- Please do not use tabs for indentation. Use spaces instead.
+
+- Very good!
+
+
+
+- Dr. Rivas
